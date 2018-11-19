@@ -1,0 +1,6 @@
+framework module Pods_Example_Grpc {
+  umbrella header "Pods-Example Grpc-umbrella.h"
+
+  export *
+  module * { export * }
+}

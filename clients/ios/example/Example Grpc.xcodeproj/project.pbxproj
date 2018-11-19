@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36005621911E7088B635E8EF /* Pods_Example_GrpcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF56FCB22A3F681A3DBA07BC /* Pods_Example_GrpcTests.framework */; };
+		BD79FD447068A2FFBD20E39C /* Pods_Example_GrpcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38804332BB9876499DFA1B77 /* Pods_Example_GrpcUITests.framework */; };
+		D45A41E41C0A9A5AF1D86CAB /* Pods_Example_Grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22355124FBA19FB7138645 /* Pods_Example_Grpc.framework */; };
+		FD8A59E621A30F4100686783 /* sample.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A59E421A30F4100686783 /* sample.grpc.swift */; };
+		FD8A59E721A30F4100686783 /* sample.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A59E521A30F4100686783 /* sample.pb.swift */; };
+		FDABAE1321830314003998C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDABAE1221830314003998C1 /* AppDelegate.swift */; };
+		FDABAE1521830314003998C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDABAE1421830314003998C1 /* ViewController.swift */; };
+		FDABAE1821830314003998C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDABAE1621830314003998C1 /* Main.storyboard */; };
+		FDABAE1A21830315003998C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDABAE1921830315003998C1 /* Assets.xcassets */; };
+		FDABAE1D21830315003998C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDABAE1B21830315003998C1 /* LaunchScreen.storyboard */; };
+		FDABAE2821830315003998C1 /* Example_GrpcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDABAE2721830315003998C1 /* Example_GrpcTests.swift */; };
+		FDABAE3321830315003998C1 /* Example_GrpcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDABAE3221830315003998C1 /* Example_GrpcUITests.swift */; };
+		FDABAE412183046D003998C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FDABAE402183046D003998C1 /* Podfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDABAE2421830315003998C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDABAE0721830314003998C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDABAE0E21830314003998C1;
+			remoteInfo = "Example Grpc";
+		};
+		FDABAE2F21830315003998C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDABAE0721830314003998C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDABAE0E21830314003998C1;
+			remoteInfo = "Example Grpc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0299D8BE0C1256843503F651 /* Pods-Example GrpcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example GrpcUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example GrpcUITests/Pods-Example GrpcUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A54C4B797BEB35EDA8D5096 /* Pods-Example Grpc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example Grpc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example Grpc/Pods-Example Grpc.debug.xcconfig"; sourceTree = "<group>"; };
+		38804332BB9876499DFA1B77 /* Pods_Example_GrpcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_GrpcUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		710AE430FDEDE74A3C6BE1DD /* Pods-Example Grpc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example Grpc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example Grpc/Pods-Example Grpc.release.xcconfig"; sourceTree = "<group>"; };
+		7650041F13B1808B178B5557 /* Pods-Example GrpcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example GrpcUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example GrpcUITests/Pods-Example GrpcUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C5C705A1ED33B7A161EB5D4E /* Pods-Example GrpcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example GrpcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example GrpcTests/Pods-Example GrpcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C97AB6823E1611080EA50119 /* Pods-Example GrpcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example GrpcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example GrpcTests/Pods-Example GrpcTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF56FCB22A3F681A3DBA07BC /* Pods_Example_GrpcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_GrpcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC22355124FBA19FB7138645 /* Pods_Example_Grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8A59E421A30F4100686783 /* sample.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sample.grpc.swift; sourceTree = "<group>"; };
+		FD8A59E521A30F4100686783 /* sample.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sample.pb.swift; sourceTree = "<group>"; };
+		FDABAE0F21830314003998C1 /* Example Grpc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example Grpc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDABAE1221830314003998C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDABAE1421830314003998C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDABAE1721830314003998C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDABAE1921830315003998C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDABAE1C21830315003998C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDABAE1E21830315003998C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDABAE2321830315003998C1 /* Example GrpcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example GrpcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDABAE2721830315003998C1 /* Example_GrpcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_GrpcTests.swift; sourceTree = "<group>"; };
+		FDABAE2921830315003998C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDABAE2E21830315003998C1 /* Example GrpcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example GrpcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDABAE3221830315003998C1 /* Example_GrpcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_GrpcUITests.swift; sourceTree = "<group>"; };
+		FDABAE3421830315003998C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDABAE402183046D003998C1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDABAE0C21830314003998C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45A41E41C0A9A5AF1D86CAB /* Pods_Example_Grpc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDABAE2021830315003998C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36005621911E7088B635E8EF /* Pods_Example_GrpcTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDABAE2B21830315003998C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD79FD447068A2FFBD20E39C /* Pods_Example_GrpcUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF7C55368E2CDAA72EE43E9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC22355124FBA19FB7138645 /* Pods_Example_Grpc.framework */,
+				CF56FCB22A3F681A3DBA07BC /* Pods_Example_GrpcTests.framework */,
+				38804332BB9876499DFA1B77 /* Pods_Example_GrpcUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDABAE0621830314003998C1 = {
+			isa = PBXGroup;
+			children = (
+				FDABAE402183046D003998C1 /* Podfile */,
+				FDABAE1121830314003998C1 /* Example Grpc */,
+				FDABAE2621830315003998C1 /* Example GrpcTests */,
+				FDABAE3121830315003998C1 /* Example GrpcUITests */,
+				FDABAE1021830314003998C1 /* Products */,
+				FF620B6B1CB764E416B28D30 /* Pods */,
+				CF7C55368E2CDAA72EE43E9E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDABAE1021830314003998C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDABAE0F21830314003998C1 /* Example Grpc.app */,
+				FDABAE2321830315003998C1 /* Example GrpcTests.xctest */,
+				FDABAE2E21830315003998C1 /* Example GrpcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDABAE1121830314003998C1 /* Example Grpc */ = {
+			isa = PBXGroup;
+			children = (
+				FDABAE1221830314003998C1 /* AppDelegate.swift */,
+				FDABAE1421830314003998C1 /* ViewController.swift */,
+				FDABAE1621830314003998C1 /* Main.storyboard */,
+				FDABAE1921830315003998C1 /* Assets.xcassets */,
+				FDABAE1B21830315003998C1 /* LaunchScreen.storyboard */,
+				FDABAE1E21830315003998C1 /* Info.plist */,
+			);
+			path = "Example Grpc";
+			sourceTree = "<group>";
+		};
+		FDABAE2621830315003998C1 /* Example GrpcTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD8A59E421A30F4100686783 /* sample.grpc.swift */,
+				FD8A59E521A30F4100686783 /* sample.pb.swift */,
+				FDABAE2721830315003998C1 /* Example_GrpcTests.swift */,
+				FDABAE2921830315003998C1 /* Info.plist */,
+			);
+			path = "Example GrpcTests";
+			sourceTree = "<group>";
+		};
+		FDABAE3121830315003998C1 /* Example GrpcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDABAE3221830315003998C1 /* Example_GrpcUITests.swift */,
+				FDABAE3421830315003998C1 /* Info.plist */,
+			);
+			path = "Example GrpcUITests";
+			sourceTree = "<group>";
+		};
+		FF620B6B1CB764E416B28D30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A54C4B797BEB35EDA8D5096 /* Pods-Example Grpc.debug.xcconfig */,
+				710AE430FDEDE74A3C6BE1DD /* Pods-Example Grpc.release.xcconfig */,
+				C5C705A1ED33B7A161EB5D4E /* Pods-Example GrpcTests.debug.xcconfig */,
+				C97AB6823E1611080EA50119 /* Pods-Example GrpcTests.release.xcconfig */,
+				0299D8BE0C1256843503F651 /* Pods-Example GrpcUITests.debug.xcconfig */,
+				7650041F13B1808B178B5557 /* Pods-Example GrpcUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDABAE0E21830314003998C1 /* Example Grpc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDABAE3721830315003998C1 /* Build configuration list for PBXNativeTarget "Example Grpc" */;
+			buildPhases = (
+				7A429E4C424293012B419900 /* [CP] Check Pods Manifest.lock */,
+				FDABAE0B21830314003998C1 /* Sources */,
+				FDABAE0C21830314003998C1 /* Frameworks */,
+				FDABAE0D21830314003998C1 /* Resources */,
+				26069800D85177AC10503276 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example Grpc";
+			productName = "Example Grpc";
+			productReference = FDABAE0F21830314003998C1 /* Example Grpc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDABAE2221830315003998C1 /* Example GrpcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDABAE3A21830315003998C1 /* Build configuration list for PBXNativeTarget "Example GrpcTests" */;
+			buildPhases = (
+				6EBBD09A56148EAFBD67669A /* [CP] Check Pods Manifest.lock */,
+				FDABAE1F21830315003998C1 /* Sources */,
+				FDABAE2021830315003998C1 /* Frameworks */,
+				FDABAE2121830315003998C1 /* Resources */,
+				9019121217DAE85ECCC92747 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDABAE2521830315003998C1 /* PBXTargetDependency */,
+			);
+			name = "Example GrpcTests";
+			productName = "Example GrpcTests";
+			productReference = FDABAE2321830315003998C1 /* Example GrpcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDABAE2D21830315003998C1 /* Example GrpcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDABAE3D21830315003998C1 /* Build configuration list for PBXNativeTarget "Example GrpcUITests" */;
+			buildPhases = (
+				AD3255A704C3F95074BC7B67 /* [CP] Check Pods Manifest.lock */,
+				FDABAE2A21830315003998C1 /* Sources */,
+				FDABAE2B21830315003998C1 /* Frameworks */,
+				FDABAE2C21830315003998C1 /* Resources */,
+				0C6790B1326C941EA2E4C85E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDABAE3021830315003998C1 /* PBXTargetDependency */,
+			);
+			name = "Example GrpcUITests";
+			productName = "Example GrpcUITests";
+			productReference = FDABAE2E21830315003998C1 /* Example GrpcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDABAE0721830314003998C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Veasna Sreng";
+				TargetAttributes = {
+					FDABAE0E21830314003998C1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					FDABAE2221830315003998C1 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FDABAE0E21830314003998C1;
+					};
+					FDABAE2D21830315003998C1 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FDABAE0E21830314003998C1;
+					};
+				};
+			};
+			buildConfigurationList = FDABAE0A21830314003998C1 /* Build configuration list for PBXProject "Example Grpc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDABAE0621830314003998C1;
+			productRefGroup = FDABAE1021830314003998C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDABAE0E21830314003998C1 /* Example Grpc */,
+				FDABAE2221830315003998C1 /* Example GrpcTests */,
+				FDABAE2D21830315003998C1 /* Example GrpcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDABAE0D21830314003998C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDABAE1D21830315003998C1 /* LaunchScreen.storyboard in Resources */,
+				FDABAE1A21830315003998C1 /* Assets.xcassets in Resources */,
+				FDABAE412183046D003998C1 /* Podfile in Resources */,
+				FDABAE1821830314003998C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDABAE2121830315003998C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDABAE2C21830315003998C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C6790B1326C941EA2E4C85E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example GrpcUITests/Pods-Example GrpcUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGRPC/SwiftGRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example GrpcUITests/Pods-Example GrpcUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26069800D85177AC10503276 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example Grpc/Pods-Example Grpc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGRPC/SwiftGRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example Grpc/Pods-Example Grpc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EBBD09A56148EAFBD67669A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example GrpcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A429E4C424293012B419900 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example Grpc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9019121217DAE85ECCC92747 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example GrpcTests/Pods-Example GrpcTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGRPC/SwiftGRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example GrpcTests/Pods-Example GrpcTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3255A704C3F95074BC7B67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example GrpcUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDABAE0B21830314003998C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDABAE1521830314003998C1 /* ViewController.swift in Sources */,
+				FDABAE1321830314003998C1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDABAE1F21830315003998C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8A59E621A30F4100686783 /* sample.grpc.swift in Sources */,
+				FDABAE2821830315003998C1 /* Example_GrpcTests.swift in Sources */,
+				FD8A59E721A30F4100686783 /* sample.pb.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDABAE2A21830315003998C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDABAE3321830315003998C1 /* Example_GrpcUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDABAE2521830315003998C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDABAE0E21830314003998C1 /* Example Grpc */;
+			targetProxy = FDABAE2421830315003998C1 /* PBXContainerItemProxy */;
+		};
+		FDABAE3021830315003998C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDABAE0E21830314003998C1 /* Example Grpc */;
+			targetProxy = FDABAE2F21830315003998C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDABAE1621830314003998C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDABAE1721830314003998C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDABAE1B21830315003998C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDABAE1C21830315003998C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDABAE3521830315003998C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDABAE3621830315003998C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDABAE3821830315003998C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A54C4B797BEB35EDA8D5096 /* Pods-Example Grpc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Example Grpc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "example.com.Example-Grpc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDABAE3921830315003998C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710AE430FDEDE74A3C6BE1DD /* Pods-Example Grpc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Example Grpc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "example.com.Example-Grpc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDABAE3B21830315003998C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C705A1ED33B7A161EB5D4E /* Pods-Example GrpcTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Example GrpcTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "example.com.Example-GrpcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example Grpc.app/Example Grpc";
+			};
+			name = Debug;
+		};
+		FDABAE3C21830315003998C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97AB6823E1611080EA50119 /* Pods-Example GrpcTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Example GrpcTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "example.com.Example-GrpcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example Grpc.app/Example Grpc";
+			};
+			name = Release;
+		};
+		FDABAE3E21830315003998C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0299D8BE0C1256843503F651 /* Pods-Example GrpcUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Example GrpcUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "example.com.Example-GrpcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Example Grpc";
+			};
+			name = Debug;
+		};
+		FDABAE3F21830315003998C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7650041F13B1808B178B5557 /* Pods-Example GrpcUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Example GrpcUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "example.com.Example-GrpcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Example Grpc";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDABAE0A21830314003998C1 /* Build configuration list for PBXProject "Example Grpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDABAE3521830315003998C1 /* Debug */,
+				FDABAE3621830315003998C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDABAE3721830315003998C1 /* Build configuration list for PBXNativeTarget "Example Grpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDABAE3821830315003998C1 /* Debug */,
+				FDABAE3921830315003998C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDABAE3A21830315003998C1 /* Build configuration list for PBXNativeTarget "Example GrpcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDABAE3B21830315003998C1 /* Debug */,
+				FDABAE3C21830315003998C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDABAE3D21830315003998C1 /* Build configuration list for PBXNativeTarget "Example GrpcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDABAE3E21830315003998C1 /* Debug */,
+				FDABAE3F21830315003998C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDABAE0721830314003998C1 /* Project object */;
+}

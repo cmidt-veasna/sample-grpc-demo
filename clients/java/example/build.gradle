@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.6'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.2'
+    }
+}
+
+plugins {
+    id 'java'
+    id "idea"
+    id "com.google.protobuf" version "0.8.6"
+    id 'com.github.johnrengelman.shadow' version '4.0.2'
+}
+
+group 'com.example'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    shadow localGroovy()
+    shadow gradleApi()
+
+    compile 'io.grpc:grpc-netty-shaded:1.15.1'
+    compile 'io.grpc:grpc-protobuf:1.15.1'
+    compile 'io.grpc:grpc-stub:1.15.1'
+    compile 'com.google.protobuf:protobuf-java:3.6.1'
+    compile 'com.google.protobuf:protobuf-java-util:3.6.1'
+    compile 'com.github.pcj:google-options:1.0.0'
+    compile 'com.google.code.gson:gson:2.8.5'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.5.1-1"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.15.1'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+    generatedFilesBaseDir = "$projectDir/src/"
+}

@@ -1,0 +1,15 @@
+install! 'cocoapods', :deterministic_uuids => false
+
+use_frameworks!
+
+target 'Example Grpc' do
+    pod 'SwiftGRPC'
+end
+
+target 'Example GrpcTests' do
+    pod 'SwiftGRPC'
+end
+
+target 'Example GrpcUITests' do
+    pod 'SwiftGRPC'
+end
