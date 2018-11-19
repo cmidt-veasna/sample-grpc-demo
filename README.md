@@ -32,7 +32,7 @@ To pre-build docker image you must first have your docker up and running on your
 machine, then run the following command:
 
 ```bash
-docker pull cambodia-demo/envoy-grpc-sample
+docker pull cambodia/envoy-grpc-sample
 ```
 
 or with a specific tag
