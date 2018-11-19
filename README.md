@@ -28,7 +28,7 @@ make generate
 
 ## Pulling Pre-Build Image ##
 
-To pre-build docker image you must first have your docker up and running on your local
+To pull pre-build docker image you must first have your docker up and running on your local
 machine, then run the following command:
 
 ```bash
@@ -43,7 +43,7 @@ docker pull cambodia-demo/envoy-grpc-sample:1.0.0
 
 ## Running Server ##
 
-Before you can running the server, first you must ensure that docker is running on your
+Before you can run the server, first you must ensure that the docker is running on your
 local machine and you must already execute one of the following the step 
 [Build the Server](#build-the-server) or [Pulling Pre-Build Image](#pulling-pre-build-image) above.
 When you already done the above step then following the below instruction
@@ -58,17 +58,26 @@ docker run -d --name envoy-grpc-sample \
  envoy-grpc:1.0.0
 ```
 
+Run container with pulling image
+```bash
+docker run -d --name envoy-grpc-sample \
+ -p 8080:8080 \
+ -p 8090:8090 \
+ -p 9901:9901 \
+ cambodia/envoy-grpc-sample:1.0.0
+```
+
 The container listen and expose on 3 ports:
 
-- envoy is listening on port 8080, the request either grpc or rest api can send to envoy on port 8080. Envoy will be responsible to convert rest into GRPC if it's rest api request. 
-- the sample server is listening on port 8090 and it only accept GRPC request. Client can grpc request directly to the container via port 8090.
+- envoy is listening on port 8080, the request either grpc or rest api can send to envoy on port 8080. Envoy will be responsible to convert rest into GRPC if it's the request is a rest api request. 
+- the sample server is listening on port 8090 and it only accept GRPC request. Client can grpc request directly to the container via port 8090 for GRPC request only.
 - envoy admin is listening on port 9901.
 
 ## Testing ##
 
 #### Test Rest API with Tools ####
 
-To test the result of the api you can use curl command if other tools that support http rest api request.
+To test the result of the api you can use `curl` command or other tools that support http rest api request.
 
 Post element data to the server:
 ```bash
@@ -107,16 +116,16 @@ clients/go/sample -command save -data '{"name":"test 11", "age": 33, "status": 7
 
 #### Test with Java client ####
 
-You use IntelliJ IDE to open the project at `clients/java`. However the below instruct is provide for command only. 
+You can use IntelliJ IDE to open the project at `clients/java`. However the below instruct is provide for command line only. 
 
 - Build an executable jar file with make command
 ```bash
-make generate-client-java CLIENT='java'
+make generate-client CLIENT='java'
 ```
 After the build success, you will see the executable jar file name `example-1.0-all.jar` under the folder `clients/java`
 
-If you don't environment to support make command (Example MS Windows). You can run the gradle command below directly.
-Make sure you are in the directory `clients/java/example` in your terminal/command prompt. 
+If you don't have environment that support make command (Example MS Windows). You can run the gradle command below directly.
+Make sure you are at the directory `clients/java/example` in your terminal/command prompt. 
 
 For Linux user
 ```bash
@@ -170,13 +179,13 @@ Open the project locate at `clients/ios/example` with XCode. Make sure to open
 
 Before you can start running and testing grpc in swift code, first you need to
 follow the instruction describe [here](https://github.com/grpc/grpc-swift#getting-the-plugins)
-to build and install the plugin. On you done that, follow the below instruction:
+to build and install the plugin. One you've done that, follow the below instruction:
 
 - To generate swift protobuf and grpc file run the following command
 ```bash
 make generate-client-ios
 ```
-- Add the 2 generated file into project `sample.grpc.swift` and `sample.pb.swift`
+- Add the 2 generated file `sample.grpc.swift` and `sample.pb.swift` into project
 - Install dependencies with pod
 ```bash
 pod install
@@ -194,17 +203,17 @@ make generate-client-web-compile
 make generate-client-web
 ```
 
-Note: Normally you don't need to compile swagger js client all the time unless
+Note: Normally you don't need to compile swagger js client everytime unless
 there are new update available from Swagger JS community.
 
 One you have done above step, use any web server to serve html document from the
-directory `clients/web/rest`. In the browser turn on debug tools to see the console
+directory `clients/web/rest`. In the browser turn on developer tools to see the console
 log from javascript code then browser to your web server address, for example: `http://localhost:8081`
 
 If you already have `npm` installed, you can follow below step:
 
 - Install http-server, [https://www.npmjs.com/package/http-server](https://www.npmjs.com/package/http-server)
-```sybase
+```base
 npm install http-server -g
 ```
 - Change directory to `clients/web/rest`
@@ -213,4 +222,4 @@ npm install http-server -g
 http-server -p 8081
 ```
 - From your browser, open a new tab and enable developer tools
-- Browser to the address http://localhost:8081
+- In the browser enter the address http://localhost:8081
